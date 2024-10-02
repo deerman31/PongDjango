@@ -2,7 +2,7 @@
 
 Here's a draft README.md for your project based on the chosen modules and requirements:
 
-# ft_transcendence: Advanced Pong Game Platform
+# PongDjango: Advanced Pong Game Platform
 
 ## Project Overview
 
@@ -52,7 +52,7 @@ This project is an advanced web-based Pong game platform developed using Django,
 - **Version Control**: Git
 
 
-# ft_transcendence: 高度なPongゲームプラットフォーム
+# PongDjango: 高度なPongゲームプラットフォーム
 
 ## プロジェクト概要
 
