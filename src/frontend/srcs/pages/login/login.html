@@ -1,0 +1,27 @@
+<div class="d-flex justify-content-center align-items-center w-100" style="overflow-y: auto; min-height: 100%;">
+    <div class="text-center bg-body-secondary shadow p-4 m-4" style="width: min(90vw, 40em);">
+        <h2>ログイン</h2>
+        <form onsubmit="onSubmitLoginForm(event)" class="d-flex flex-column align-items-stretch mt-4 gap-2">
+            <div class="row align-items-center mb-3">
+                <label for="identifier" class="col-sm-5 col-form-label text-start text-sm-end">Name or メールアドレス:</label>
+                <div class="col-sm-7">
+                    <input type="identifier" id="identifier" name="identifier" class="form-control" autocomplete="username" required />
+                </div>
+            </div>
+            <div class="row align-items-center mb-3">
+                <label for="password" class="col-sm-5 col-form-label text-start text-sm-end">パスワード:</label>
+                <div class="col-sm-7">
+                    <input type="password" id="password" name="password" class="form-control" autocomplete="current-password" required />
+                </div>
+            </div>
+            <div id="2fa-field" class="row align-items-center mb-3" style="display: none;">
+                <label for="otp" class="col-sm-5 col-form-label text-start text-sm-end">2FAコード:</label>
+                <div class="col-sm-7">
+                    <input type="number" id="otp" name="otp" class="form-control" autocomplete="one-time-code" min="0" max="999999" />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">ログイン</button>
+        </form>
+        <p id="message" class="mt-4 text-danger text-wrap" style="width: 100%; min-width: 0; overflow-wrap: anywhere; word-wrap: break-word; word-break: break-all;"></p>
+    </div>
+</div>

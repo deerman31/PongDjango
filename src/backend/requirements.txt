@@ -1,0 +1,49 @@
+# django利用のため
+Django==3.2.23
+
+# DjangoでRESTful APIを簡単に構築するためのツールキット
+djangorestframework
+
+# JSON Web Tokenの生成と検証を行うPythonライブラリ
+# jwt認証の構築に使用。最初はdjoserを使っていたが、課題要件に抵触すると考え使用を辞め、PyJWTを使って実装
+PyJWT
+
+# PostgreSQLデータベースとPythonを接続するためのライブラリ
+psycopg2-binary
+
+# DjangoアプリケーションでCORSを管理するライブラリ
+django-cors-headers
+
+# 画像処理ライブラリ。　avatarを扱う際に使用
+Pillow
+
+# ２段階認証の構築に使用
+# ワンタイムパスワード（TOTP）を生成・検証するためのライブラリ
+pyotp
+# QRコードを生成するためのライブラリ
+qrcode
+
+
+# データベース接続設定を環境変数から簡単に構成するためのユーティリティ。
+dj-database-url>=0.5.0
+
+
+# oauth2.0
+# HTTPリクエストを簡単に送信するためのライブラリ。OAuth2.0の実装に使用
+requests
+
+# pythonで環境変数を使う際に使う
+python-dotenv
+
+# game
+# pongゲームなどのwebsocket接続の際に使う
+redis
+
+# DjangoでWebSocketやその他の非同期プロトコルをサポートするためのライブラリ
+channels
+
+# ChannelsフレームワークでRedisをバックエンドとして使用するためのアダプター
+channels-redis
+
+# ASGIサーバー。DjangoChannelsアプリケーションを実行するために使用
+daphne

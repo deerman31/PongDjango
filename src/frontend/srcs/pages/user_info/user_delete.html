@@ -1,0 +1,13 @@
+<div class="text-center bg-body-secondary shadow p-4 m-4" style="width: min(90vw, 32em);">
+    <h2>Delete User</h2>
+    <form onsubmit="deleteUserRequest(event)" class="d-flex flex-column align-items-stretch mt-4 gap-2">
+        <div class="row align-items-center mb-3">
+            <label for="current-username" class="col-sm-5 col-form-label text-start text-sm-end">Enter Current Password:</label>
+            <div class="col-sm-7">
+                <input type="password" id="current_password" name="current-username" class="form-control" />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-danger">Delete Account</button>
+    </form>
+    <p id="responseMessage" class="mt-4 text-danger text-wrap" style="width: 100%; min-width: 0; overflow-wrap: anywhere; word-wrap: break-word; word-break: break-all;"></p>
+</div>

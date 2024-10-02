@@ -1,0 +1,21 @@
+<div class="p-3" style="min-height: 100%; width: min(90vw, 40em);">
+    <h1>フレンド機能</h1>
+
+    <!-- ユーザー検索 -->
+    <div class="my-3" style="min-height: 10em;">
+        <input oninput="onChangeUserSearchInput(event)" type="text" placeholder="ユーザー名を検索" class="form-control" />
+        <ui id="searchResults" class="list-group mt-2"></ui>
+    </div>
+
+    <!-- 受信したフレンド招待リスト -->
+    <div class="my-3" style="min-height: 10em;">
+        <h2>フレンド招待</h2>
+        <ui id="requestList" class="list-group mt-2"></li>
+    </div>
+
+    <!-- 現在のフレンドリスト -->
+    <div class="my-3" style="min-height: 10em;">
+        <h2>現在のフレンド</h2>
+        <ui id="friendList" class="list-group mt-2"></ul>
+    </div>
+</div>

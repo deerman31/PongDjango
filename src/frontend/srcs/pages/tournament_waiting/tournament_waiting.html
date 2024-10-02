@@ -1,0 +1,26 @@
+<div class="p-2 d-flex flex-column justify-content-center" style="min-height: 100%; width: min(95vw, 48em);">
+  <h1 id="status-message" class="text-center">Waiting for players...</h1>
+
+  <div class="table-responsive">
+    <table id="tournament-container" class="table table-striped" style="display: none;">
+      <thead>
+        <tr>
+          <th scope="col">Player A</th>
+          <th scope="col">Round</th>
+          <th scope="col">Player B</th>
+        </tr>
+      </thead>
+      <tbody id="tournament-players">
+      </tbody>
+    </table>
+  </div>
+
+  <button id="ready-button" onclick="onClickReadyButton(event)" class="btn btn-primary" style="display: none;">ゲームルーム準備完了</button>
+
+  <canvas id="pong-game" class="w-100" width="770" height="600" style="display: none; max-height: calc(100vh - 12rem);"></canvas>
+
+  <div class="btn-group-vertical m-3" role="group" id="move-btn-group" style="display: none;">
+    <button type="button" class="btn btn-primary btn-lg" onclick="onTournamentAction('up')">↑</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="onTournamentAction('down')">↓</button>
+  </div>
+</div>

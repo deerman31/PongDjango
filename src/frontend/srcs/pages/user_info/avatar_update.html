@@ -1,0 +1,22 @@
+<div class="container text-center bg-body-secondary shadow p-4 m-4" style="width: min(90vw, 40em);">
+    <h2>アバターの更新</h2>
+    <div class="row mt-4 gap-2">
+        <div class="col d-flex flex-column align-items-center">
+            <label for="current-avatar">現在のアバター</label>
+            <img id="current-avatar" src="" alt="現在のアバター" class="img-fluid rounded m-2" />
+        </div>
+        <div class="col d-flex flex-column align-items-center flex-grow-1">
+            <label for="new-avatar">新しいアバター</label>
+            <img id="new-avatar-preview" src="" alt="新しいアバター (プレビュー)" class="img-fluid rounded m-2" style="display: none;" />
+            <div id="new-avatar-preview-spinner" class="spinner-border my-auto" role="status" style="display: none;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <input onchange="onChangeAvatarPreview(event)" type="file" id="new-avatar" class="form-control mt-auto" accept="image/*" />
+        </div>
+    </div>
+    <div class="mt-3">
+        <button onclick="updateAvatar(event)" class="btn btn-primary px-4">更新</button>
+        <button onclick="deleteAvatar(event)" class="btn btn-outline-danger px-4">削除</button>
+    </div>
+    <p id="message" class="mt-3 text-danger text-wrap" style="width: 100%; min-width: 0; overflow-wrap: anywhere; word-wrap: break-word; word-break: break-all;"></p>
+</div>

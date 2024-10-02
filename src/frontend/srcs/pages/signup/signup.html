@@ -1,0 +1,33 @@
+<div class="d-flex justify-content-center align-items-center" style="overflow-y: auto; min-height: 100%;">
+    <div class="text-center bg-body-secondary shadow p-4 m-4" style="width: min(90vw, 40em);">
+        <h2>サインアップ</h2>
+        <form onsubmit="onSubmitSignUpForm(event)" class="d-flex flex-column align-items-stretch mt-4 gap-2">
+            <div class="row align-items-center mb-3">
+                <label for="name" class="col-sm-4 col-form-label text-start text-sm-end">名前:</label>
+                <div class="col-sm-8">
+                    <input type="text" id="name" name="name" class="form-control" required />
+                </div>
+            </div>
+            <div class="row align-items-center mb-3">
+                <label for="email" class="col-sm-4 col-form-label text-start text-sm-end">メールアドレス:</label>
+                <div class="col-sm-8">
+                    <input type="email" id="email" name="email" class="form-control" autocomplete="email" required />
+                </div>
+            </div>
+            <div class="row align-items-center mb-3">
+                <label for="password" class="col-sm-4 col-form-label text-start text-sm-end">パスワード:</label>
+                <div class="col-sm-8">
+                    <input type="password" id="password" name="password" class="form-control" autocomplete="new-password" required />
+                </div>
+            </div>
+            <div class="row align-items-center mb-3">
+                <label for="re_password" class="col-sm-4 col-form-label text-start text-sm-end">パスワード確認:</label>
+                <div class="col-sm-8">
+                    <input type="password" id="re_password" name="re_password" class="form-control" autocomplete="new-password" required />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">サインアップ</button>
+        </form>
+        <p id="message" class="mt-4 text-danger text-wrap"></p>
+    </div>
+</div>

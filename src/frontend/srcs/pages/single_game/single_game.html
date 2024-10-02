@@ -1,0 +1,11 @@
+<div class="p-2 d-flex flex-column justify-content-center" style="min-height: 100%; width: min(95vw, 48em);">
+  <h1 id="status-message" class="text-center">Waiting for players...</h1>
+
+  <!-- ゲーム画面用のキャンバスを追加 -->
+  <canvas id="pong-game" class="w-100" width="770" height="600" style="display: none; max-height: calc(100vh - 12rem);"></canvas>
+
+  <div class="btn-group-vertical m-3" role="group" id="move-btn-group" style="display: none;">
+    <button type="button" class="btn btn-primary btn-lg" onclick="onSingleGameAction('up')">↑</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="onSingleGameAction('down')">↓</button>
+  </div>
+</div>

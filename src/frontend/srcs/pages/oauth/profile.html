@@ -1,0 +1,25 @@
+<!-- templates/accounts/profile.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <script>
+        function handleLoginResponse(accessToken, refreshToken) {
+            localStorage.setItem('access_token', accessToken);
+            localStorage.setItem('refresh_token', refreshToken);
+            // 必要な処理を追加
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome, {{ user_info.login }}!</h1>
+    <p>Your email: {{ user_info.email }}</p>
+    <p>Access Token: {{ access_token }}</p>
+    <p>Refresh Token: {{ refresh_token }}</p>
+    <a href="/home/">Home</a>
+    <script>
+        handleLoginResponse("{{ access_token }}", "{{ refresh_token }}");
+    </script>
+</body>
+</html>

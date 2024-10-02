@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-items-center w-100" style="overflow-y: auto; min-height: 100%;">
+    <div class="text-center bg-body-secondary shadow p-4 m-4" style="width: min(90vw, 32em);">
+        <h2>ユーザー名の更新</h2>
+        <form onsubmit="updateUsername(event)" class="d-flex flex-column align-items-stretch mt-4 gap-2">
+            <div class="row align-items-center mb-3">
+                <label for="current-username" class="col-sm-5 col-form-label text-start text-sm-end">現在のユーザー名:</label>
+                <div class="col-sm-7">
+                    <input type="text" id="current-username" name="current-username" class="form-control" disabled readonly />
+                </div>
+            </div>
+            <div class="row align-items-center mb-3">
+                <label for="new-username" class="col-sm-5 col-form-label text-start text-sm-end">新しいユーザー名:</label>
+                <div class="col-sm-7">
+                    <input type="text" id="new-username" name="new-username" class="form-control" required />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">更新</button>
+        </form>
+        <p id="message" class="mt-4 text-danger text-wrap" style="width: 100%; min-width: 0; overflow-wrap: anywhere; word-wrap: break-word; word-break: break-all;"></p>
+    </div>
+</div>

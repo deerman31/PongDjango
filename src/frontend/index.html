@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ft_transcendence</title>
+</head>
+<body class="d-flex flex-column vh-100 vw-100">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
+        <style id="navbar-style">
+            .login-required {
+                visibility: hidden;
+            }
+        </style>
+        <div class="container-fluid">
+            <div class="navbar-brand">ft_transcendence</div>
+            <button class="navbar-toggler login-required" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse login-required" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#/home">🏠 Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#/user_information">👤 自分の情報</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#/friend">👥 フレンドリスト</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-secondary mb-1 m-lg-2" onclick="toggleTheme()">
+                    <!-- Bootstrap Icons -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                    </svg>
+                    /
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon" viewBox="0 0 16 16">
+                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
+                    </svg>
+                </button>
+                <button class="btn btn-secondary mb-1 my-lg-0" onclick="logout()">🚪 ログアウト</button>
+            </div>
+        </div>
+    </nav>
+    <div id="main-content" class="content flex-grow-1 d-flex justify-content-center align-items-center">
+        <!-- ここに動的にコンテンツがロードされます -->
+    </div>
+    
+    <script src="./srcs/utils/utils.js"></script>
+    <script src="./srcs/utils/verify_token.js"></script>
+    
+    <script src="./srcs/pages/base/base.js"></script>
+    
+    <script src="./srcs/pages/friend/friend.js"></script>
+    <script src="./srcs/pages/history/history.js"></script>
+    <script src="./srcs/pages/login/login.js"></script>
+    <script src="./srcs/pages/otp/otp_setup.js"></script>
+    <script src="./srcs/pages/rock_paper_scissors/rock_paper_scissors.js"></script>
+    <script src="./srcs/pages/rps_history/rps_history.js"></script>
+    <script src="./srcs/pages/signup/signup.js"></script>
+    <script src="./srcs/pages/single_game/single_game.js"></script>
+    <script src="./srcs/pages/tournament_waiting/tournament_waiting.js"></script>
+
+    <script src="./srcs/pages/user_info/avatar_update.js"></script>
+    <script src="./srcs/pages/user_info/email.js"></script>
+    <script src="./srcs/pages/user_info/password_update.js"></script>
+    <script src="./srcs/pages/user_info/user_delete.js"></script>
+    <script src="./srcs/pages/user_info/username.js"></script>
+
+    <script src="./srcs/utils/app.js" type="module"></script>
+</body>
+</html>

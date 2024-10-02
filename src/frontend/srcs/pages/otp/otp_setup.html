@@ -1,0 +1,13 @@
+<div class="d-flex flex-column align-items-stretch text-center bg-body-secondary shadow p-4 m-4 gap-2" style="width: min(90vw, 40em);">
+    <h1>Set up Two-Factor Authentication</h1>
+    <button onclick="generateQRCode()" class="btn btn-primary row my-2">Generate QR Code</button>
+    <img id="qr-code" alt="QR Code will be displayed here" class="row" style="display: none;">
+    <form onsubmit="verifyOTP(event)" id="otp-verification" class="row align-items-center" style="display: none;">
+        <label for="otp" class="col-sm-3 col-form-label text-start text-sm-end">Enter OTP:</label>
+        <div class="col-8 col-sm-6">
+            <input type="number" id="otp" name="otp" autocomplete="one-time-code" class="form-control" min="0" max="999999" required />
+        </div>
+        <button type="submit" class="btn btn-outline-primary col-4 col-sm-3">Verify OTP</button>
+    </form>
+    <button onclick="disable2FA()" class="btn btn-outline-danger mt-2 align-self-start">Disable 2FA</button>
+</div>
